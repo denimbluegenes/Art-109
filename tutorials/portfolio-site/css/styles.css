@@ -10,8 +10,21 @@ Off-white     #f6f6f6
 
 /* Global Styles */
 --------------------------------*/
+/*
+ https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+    box-sizing: : border-box;
+}
+*, *:before, *after {
+    box-sizing: inherit;
+}
+html, body{
+    height:100%;
+}
 body {
 background: rgb(226, 248, 219);
+margin: 0;
 }
 
 /*links*/
@@ -33,6 +46,12 @@ footer a:hover{
     color: #f6f6f6;
     text-decoration: none;
 }
+.content-wrapper{
+    margin: 0 auto;
+    padding: 30px; 
+    max-width: 900px
+}
+
 /* HOME
 --------------------------------*/
 .home {  
@@ -43,8 +62,16 @@ footer a:hover{
 .home .content-wrapper {
     background: rgb(226, 248, 219/0.85);
 }
+
 /* RESUME
 --------------------------------*/
+.resume header:before {
+    background:url(../images/bg-home-office-studio.jpg) center;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 375px;
+}
 
 /*Profile
 --------------------------------*/
@@ -64,4 +91,21 @@ footer a:hover{
 footer {
     background: #222;
     color: #d3d4d6;
+    position: relative; 20px;
+    width: 100%; 
+    bottom: -409px;
+    left: 0;
+}
+.socials {
+    list-style-type: none;
+    padding: 0;
+}
+.socials li {
+    display:inline-block;
+}
+.socials img {
+    width: 35px;
+}
+.socials {
+    padding: 20px 20px 0 0;
 }
