@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Too Many Tabs — Net Art</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Over Stimulated</h1>
+    <button id="quiet" aria-pressed="false" title="Reduce audio/motion">Quiet Mode</button>
+  </header>
+
+  <main id="scene" role="main" aria-live="polite">
+    <img id="horse" src="Images/horse.png" alt="A calm pixel horse." />
+    <div id="tasks">
+      <button class="task" data-id="feed">Feed</button>
+      <button class="task" data-id="brush">Brush</button>
+      <button class="task" data-id="walk">Walk</button>
+    </div>
+  </main>
+
+  <div id="windows" aria-hidden="true"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>

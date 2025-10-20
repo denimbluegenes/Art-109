@@ -1,0 +1,49 @@
+/* Base layout ----------------*/
+:root { --bg:#ffffff; --ink:#809a9b; --t:260ms; }
+* { box-sizing: border-box; }
+html, body { height:100%; margin:0; background:var(--bg); color:var(--ink); font-family:Verdana, Geneva, Tahoma, sans-serif; }
+
+header, footer {
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 0.75rem 1rem; gap: 1rem;
+}
+h1 { font-size: clamp(1.1rem, 2.2vw, 1.6rem); margin:0; }
+#quiet {
+  padding:.55rem .8rem; border-radius:12px; border:1px solid #ddd; background:rgb(255, 255, 255); cursor:pointer;
+}
+#quiet[aria-pressed="true"] { background:#f2f2f2; }
+
+/* Scene ----------------*/
+#scene {
+  min-height: calc(100vh - 120px);
+  display:grid; place-items:center; gap:1rem; position:relative;
+}
+#horse {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+#tasks { display:flex; gap:.75rem; flex-wrap:wrap; justify-content:center; }
+.task {
+  padding:.8rem 1rem; border-radius:12px; border:1px solid #ddd; background:white; cursor:pointer;
+}
+.task:hover { transform: translateY(-2px); box-shadow: 0 3px 6px rgb(161, 196, 126); }
+
+/* Pop-up windows ----------------*/
+#windows { position:fixed; inset:0; pointer-events:none; }
+.window {
+  position:absolute; width: clamp(160px, 26vw, 360px); min-height: 96px;
+  border:1px solid #345a2c; border-radius:10px; background:#ffffff; box-shadow:0 16px 40px rgba(0,0,0,.18);
+  padding:.6rem .8rem; pointer-events:auto; user-select:none; overflow:hidden;
+  animation: pop .2s ease-out;
+}
+.window .bar { font: 600 14px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; display:flex; justify-content:space-between; align-items:center; margin-bottom:.4rem; }
+
+.window .close { border:none; background:transparent; cursor:pointer; font-weight:700; font-size:18px; }
+
+@keyframes pop { from { transform: scale(.92); opacity:0 } to { transform: scale(1); opacity:1 } }
+
+/* Freeze end */
+.freeze #scene * { filter: grayscale(1) blur(1px); pointer-events:none; }
+
