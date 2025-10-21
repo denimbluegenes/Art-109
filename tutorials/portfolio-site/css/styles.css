@@ -111,7 +111,7 @@ footer a:hover{
 }
 @media screen and (max-width:650px){
     .home .content-wrapper {
-        paddingL 10px;
+        padding: 10px;
     }
     .content-bg {
         padding: 20px;
@@ -239,7 +239,7 @@ footer a:hover{
 .socials img:hover {
     opacity: 0.5;
 }
-@media screen and (min-widthL 860px){
+@media screen and (min-width: 860px){
     footer{
         display: flex;
         justify-content: space-between;
