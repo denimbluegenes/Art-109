@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Résumé │ Erilyn Le</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0e1116;--panel:#141922;--text:#e8edf3;--muted:#9aabbf;--brand:#2ecc71;--brand2:#4098ff;--b:1px solid rgba(255,255,255,.08);--br:18px}
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0;background:radial-gradient(90% 40% at 85% -10%,rgba(64,152,255,.08),transparent),
+                     radial-gradient(80% 40% at -10% 10%,rgba(46,204,113,.08),transparent),var(--bg);
+         color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1000px;margin:0 auto;padding:22px}
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(120%) blur(8px);background:rgba(14,17,22,.65);border-bottom:var(--b)}
+    .nav-in{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .brand{display:flex;align-items:center;gap:12px}.logo{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand2));font-weight:800;color:#081014}
+    .title{font-weight:800}.links{display:flex;gap:8px}
+    .links a{padding:10px 14px;border-radius:12px;color:var(--muted);font-weight:600}
+    .links a:is(:hover,.active){color:#fff;background:rgba(255,255,255,.06)}
+    h1{margin:22px 0 6px;font-size:clamp(1.9rem,3.2vw,2.6rem)}
+    .eyebrow{color:var(--brand);text-transform:uppercase;letter-spacing:.14em;font-weight:800;font-size:.78rem}
+    .grid{display:grid;grid-template-columns:1fr .8fr;gap:22px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));border:var(--b);border-radius:16px;padding:18px}
+    .list{margin:.2rem 0 0 1.1rem}
+    footer{border-top:var(--b);margin-top:28px;color:#9aabbf}
+    .foot{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:18px 0}
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;border:var(--b);background:rgba(255,255,255,.04);font-weight:700}
+    .btn:hover{background:rgba(255,255,255,.08)}
+  </style>
+</head>
+<body class="resume">
+  <header class="nav">
+    <div class="container nav-in">
+      <a class="brand" href="portfolio.html"><div class="logo">EL</div><div class="title">Erilyn Le</div></a>
+      <nav class="links">
+        <a href="portfolio.html">Home</a>
+        <a href="project.html">Projects</a>
+        <a class="active" href="resume.html">Résumé</a>
+      </nav>
+      <!-- Optional: <a class="btn" href="images/ele-resume.pdf">Download PDF</a> -->
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Résumé</h1>
+    <p class="eyebrow">Profile</p>
+    <p>Hi, I’m Erilyn — a Graphic Designer focused on brand systems, motion, and editorial. I care about clarity, warmth, and collaborative workflows that help teams move faster.</p>
+
+    <section class="grid">
+      <section class="card">
+        <h2>Experience</h2>
+
+        <article class="job">
+          <h3>Freelance Designer & Marketer — NorCal Furniture <span style="color:#9aabbf;font-weight:600">· Present</span></h3>
+          <ul class="list">
+            <li>Led a visual refresh across site and socials; improved consistency and accessibility.</li>
+            <li>Designed email and SMS campaigns to boost engagement.</li>
+            <li>Built content systems for faster weekly production.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <h3>Lead Graphic Designer & Event Supervisor — SJSU Esports <span style="color:#9aabbf;font-weight:600">· Present</span></h3>
+          <ul class="list">
+            <li>Directed a small design team; collaborated across stream/photo/comp teams.</li>
+            <li>Shipped posters, social kits, and event packages; maintained brand cohesion.</li>
+            <li>Delivered motion assets for streams and tournament promos.</li>
+          </ul>
+        </article>
+      </section>
+
+      <aside class="card">
+        <h2>Education</h2>
+        <p><strong>San José State University</strong> — B.A. Design Studies, Graphic Design (2026)</p>
+        <p>Adobe Ambassador Club · Access Magazine contributor</p>
+
+        <h2 style="margin-top:14px">Contact</h2>
+        <p><a href="mailto:erilynmle@gmail.com">erilynmle@gmail.com</a></p>
+        <p><a class="btn" href="portfolio.html">Back to Home</a></p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="container foot">
+    <div>© <span id="y"></span> Erilyn Le · <a href="mailto:erilynmle@gmail.com">erilynmle@gmail.com</a></div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>

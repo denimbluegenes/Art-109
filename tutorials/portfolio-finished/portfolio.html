@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Erilyn Le | Graphic Designer</title>
+  <meta name="description" content="Erilyn Le — Graphic Designer crafting impactful visual media, motion graphics, and memorable experiences." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0e1116; --panel:#141922; --text:#e8edf3; --muted:#9aabbf;
+      --brand:#2ecc71; --brand2:#4098ff;
+      --ring:rgba(64,152,255,.35); --br:18px; --b:1px solid rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0;background:radial-gradient(90% 40% at 85% -10%,rgba(64,152,255,.08),transparent),
+                     radial-gradient(80% 40% at -10% 10%,rgba(46,204,113,.08),transparent),var(--bg);
+         color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1080px;margin:0 auto;padding:22px}
+    /* NAV */
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(120%) blur(8px);
+         background:rgba(14,17,22,.65);border-bottom:var(--b)}
+    .nav-in{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;
+          background:linear-gradient(135deg,var(--brand),var(--brand2));font-weight:800;color:#081014}
+    .title{font-weight:800;letter-spacing:.2px}
+    .links{display:flex;gap:8px}
+    .links a{padding:10px 14px;border-radius:12px;color:var(--muted);font-weight:600}
+    .links a:is(:hover,.active){color:var(--text);background:rgba(255,255,255,.06)}
+    .btn{padding:10px 16px;border-radius:12px;font-weight:700;border:var(--b);background:rgba(255,255,255,.03);transition:.25s}
+    .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.06)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#081014;border:none;box-shadow:0 12px 32px var(--ring)}
+    /* HERO */
+    .hero{padding:88px 22px 40px}
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:32px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}.hero{padding:64px 20px 28px}}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));border:var(--b);border-radius:var(--br);padding:30px}
+    .eyebrow{color:var(--brand);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.82rem}
+    h1{margin:.35rem 0 .6rem;font-weight:800;font-size:clamp(2.1rem,3.4vw,3.1rem);line-height:1.1}
+    .lead{font-size:1.05rem;color:#d5dde7;max-width:60ch}
+    .meta{display:flex;flex-wrap:wrap;gap:10px 12px;margin-top:18px}
+    .tag{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:var(--b);font-size:.9rem}
+    .actions{display:flex;gap:12px;margin-top:22px}
+    /* SIDE */
+    .panel{display:grid;gap:14px}.panel .card{padding:20px}
+    /* PROJECT STRIP */
+    .strip{margin:40px auto 12px}
+    .strip h2{font-size:1.05rem;color:var(--muted);letter-spacing:.14em;text-transform:uppercase}
+    .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px}
+    @media (max-width:900px){.tiles{grid-template-columns:1fr 1fr}}
+    @media (max-width:560px){.tiles{grid-template-columns:1fr}}
+    .tile{border-radius:16px;border:var(--b);background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.02));padding:16px;min-height:130px}
+    .tile h3{margin:0 0 6px;font-size:1.02rem}.tile p{margin:0;color:var(--muted);font-size:.95rem}
+    .tile:hover{outline:2px solid var(--brand2);box-shadow:0 0 0 8px var(--ring)}
+    /* FOOTER */
+    footer{border-top:var(--b);margin-top:40px}
+    .foot{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:20px 22px;color:var(--muted)}
+    .social{display:flex;gap:10px}
+    .social a{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:12px;border:var(--b);background:rgba(255,255,255,.04)}
+    .social a:hover{background:rgba(255,255,255,.08)}
+  </style>
+</head>
+<body class="home">
+  <header class="nav">
+    <div class="container nav-in">
+      <a class="brand" href="#home"><div class="logo">EL</div><div class="title">Erilyn Le</div></a>
+      <nav class="links" aria-label="Primary">
+        <a class="active" href="portfolio.html">Home</a>
+        <a href="project.html">Projects</a>
+        <a href="resume.html">Résumé</a>
+      </nav>
+      <a class="btn primary" href="#contact">Let’s Work</a>
+    </div>
+  </header>
+
+  <main id="home" class="hero container">
+    <div class="grid">
+      <section class="card">
+        <div class="eyebrow">Graphic Designer</div>
+        <h1>Designing memorable visuals that feel human.</h1>
+        <p class="lead">I create impactful visual media, motion graphics, and systems that shape emotional connection. I value open, reflective collaboration—taking smart risks to craft clarity, peace, and resonance one story at a time.</p>
+        <div class="meta">
+          <span class="tag">Brand & Identity</span>
+          <span class="tag">Motion Design</span>
+          <span class="tag">UI/UX Visuals</span>
+          <span class="tag">Editorial</span>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="project.html">See Selected Work</a>
+          <a class="btn" href="resume.html">Download Résumé</a>
+        </div>
+      </section>
+
+      <aside class="panel">
+        <div class="card">
+          <div class="eyebrow">Currently</div>
+          <p style="margin:.4rem 0 0">Exploring brand systems and motion for community-focused teams. Open to freelance and 2025 roles.</p>
+        </div>
+        <div class="card">
+          <div class="eyebrow">Highlights</div>
+          <ul style="margin:.5rem 0 0 1.1rem;padding:0">
+            <li>Led multi-platform rebrand for SJSU Esports</li>
+            <li>Motion graphics for event campaigns</li>
+            <li>Editorial layouts & social systems</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="eyebrow">Contact</div>
+          <p style="margin:.4rem 0 0"><a href="mailto:erilynmle@gmail.com">erilynmle@gmail.com</a></p>
+        </div>
+      </aside>
+    </div>
+
+    <section class="strip" id="projects">
+      <h2>Selected projects</h2>
+      <div class="tiles">
+        <a class="tile" href="project.html#esports"><h3>SJSU Esports Rebrand</h3><p>Unified visuals across broadcast, socials, and events.</p></a>
+        <a class="tile" href="project.html#graphinion"><h3>Graphinion Starter System</h3><p>Brand + product visuals for a social startup.</p></a>
+        <a class="tile" href="project.html#access"><h3>Access Magazine Spreads</h3><p>Editorial design with motion-ready assets.</p></a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container foot">
+      <div>© <span id="y"></span> Erilyn Le · <a href="mailto:erilynmle@gmail.com">erilynmle@gmail.com</a></div>
+      <div class="social" aria-label="Social links">
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="Instagram">ig</a>
+        <a href="#" aria-label="Twitter/X">tw</a>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
